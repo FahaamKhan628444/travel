@@ -14,7 +14,7 @@ export default function Navbar({ onAboutUsClick, onServiceClick, onPartnersClick
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <RouterLink to="/" className="text-xl font-bold text-gray-900 hover:text-gray-600">
-              TimelyPay
+              Mittal Travels
             </RouterLink>
             <div className="ml-32 space-x-16 hidden md:flex">
               <RouterLink to="/" className="text-gray-600 hover:text-gray-800">Home</RouterLink>
@@ -28,17 +28,17 @@ export default function Navbar({ onAboutUsClick, onServiceClick, onPartnersClick
           <div className="flex space-x-8 hidden md:flex ml-1">
             {/* <ThemeToggle /> Add the ThemeToggle button here */}
             <RouterLink
-              to="/register"
+              to="/booking"
               className="bg-violet-600 text-white px-4 py-2 rounded-md hover:bg-violet-200 transition"
             >
-              Sign in
+          <span className="fas fa-car"></span>  Book your taxi now
             </RouterLink>
-            <RouterLink
+            {/* <RouterLink
               to="/login"
               className="bg-violet-200 text-black px-4 py-2 rounded-md hover:bg-violet-600 hover:text-white"
             >
               Login
-            </RouterLink>
+            </RouterLink> */}
           </div>
           <button
             onClick={toggleMenu}
@@ -71,10 +71,10 @@ export default function Navbar({ onAboutUsClick, onServiceClick, onPartnersClick
           <RouterLink to="/" className="text-gray-600 hover:text-gray-800 py-2" onClick={toggleMenu}>Home</RouterLink>
           <RouterLink to="#" className="text-gray-600 hover:text-gray-800 py-2" onClick={() => { toggleMenu(); onAboutUsClick(); }}>About Us</RouterLink>
           <RouterLink to="#" className="text-gray-600 hover:text-gray-800 py-2" onClick={() => { toggleMenu(); onServiceClick(); }}>Service</RouterLink>
-          <RouterLink to="#" className="text-gray-600 hover:text-gray-800 py-2" onClick={() => { toggleMenu(); onPartnersClick(); }}>Our Partners</RouterLink>
+          {/* <RouterLink to="#" className="text-gray-600 hover:text-gray-800 py-2" onClick={() => { toggleMenu(); onPartnersClick(); }}>Our Partne</RouterLink> */}
           <RouterLink to="#" className="text-gray-600 hover:text-gray-800 py-2" onClick={() => { toggleMenu(); onContactClick(); }}>Contact Us</RouterLink>
-          <RouterLink to="/register" className="bg-violet-600 text-white px-4 py-2 rounded-md hover:bg-violet-200 transition mt-4" onClick={toggleMenu}>Register</RouterLink>
-          <RouterLink to="/login" className="bg-violet-200 text-black px-4 py-2 rounded-md hover:bg-violet-600 transition mt-2" onClick={toggleMenu}>Login</RouterLink>
+          <RouterLink to="/booking" className="bg-violet-600 text-white px-4 py-2 rounded-md hover:bg-violet-200 transition mt-4" onClick={toggleMenu}>Book your taxi now</RouterLink>
+          {/* <RouterLink to="/login" className="bg-violet-200 text-black px-4 py-2 rounded-md hover:bg-violet-600 transition mt-2" onClick={toggleMenu}>Login</RouterLink> */}
         </div>
       </div>
     </nav>

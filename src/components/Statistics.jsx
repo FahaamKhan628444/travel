@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 
 const Statistics = () => {
   const stats = [
-    { label: 'Happy Customers', end: 150000, suffix: '+' },
-    { label: 'Partners', end: 300, suffix: '+' },
-    { label: 'Bills added Daily', end: 200, suffix: '+' },
+    { label: 'Happy Customers', end: 2000, suffix: '+' },
+    { label: 'Cars', end: 35, suffix: '+' },
+    { label: 'Experienced Drivers', end: 40, suffix: '+' },
   ];
 
   return (

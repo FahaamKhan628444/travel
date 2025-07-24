@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import toast, { Toaster } from 'react-hot-toast';
 
 export default function ContactUs() {
   const [formData, setFormData] = useState({
@@ -20,7 +21,8 @@ export default function ContactUs() {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Simulate a successful form submission
-    setSuccessMessage('We received your query. Our team will contact you in 2-3 working days.');
+    setSuccessMessage('Thanks! We received your details. We will contact you soon.');
+    toast.success('Thanks! We received your details. We will contact you soon.');
     // Clear the form
     setFormData({
       name: '',
@@ -50,32 +52,32 @@ export default function ContactUs() {
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
+            <label htmlFor='phone' className="block text-sm font-medium text-gray-700">Mobile Number</label>
             <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
+              type="number"
+              id="number"
+              name="number"
+              value={formData.number}
               onChange={handleChange}
-              placeholder='abc@gmail.com'
+              placeholder='e.g. 9988776655'
               className="w-full p-3 border bg-gradient-to-r from-white to-white border-gray-500 rounded-xl focus:outline-none focus:ring-4 focus:ring-purple-200 text-black"
               required
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message</label>
+            <label htmlFor="message" className="block text-sm font-medium text-gray-700">Pre Booking</label>
             <textarea
               id="message"
               name="message"
               rows="4"
               value={formData.message}
               onChange={handleChange}
-              placeholder='Any Query! Write here, we are happy to solve it.'
+              placeholder='Enter the complete details like Pickup Location, Drop Location, Date, Time.'
               className="w-full p-3 border bg-gradient-to-r from-white to-white border-gray-500 rounded-xl focus:outline-none focus:ring-4 focus:ring-purple-200 text-black"
               required
             ></textarea>
           </div>
-          <div className="mb-4">
+          {/* <div className="mb-4">
             <label htmlFor="slotTime" className="block text-sm font-medium text-gray-700">Preferred Slot Time</label>
             <select
               id="slotTime"
@@ -91,7 +93,7 @@ export default function ContactUs() {
               <option value="evening">2 PM - 4 PM</option>
               <option value="night">4 PM - 5:30 PM</option>
             </select>
-          </div>
+          </div> */}
           <button
             type="submit"
             className="w-full bg-indigo-500 text-white py-2 px-4 rounded-md hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50"
@@ -102,6 +104,7 @@ export default function ContactUs() {
         {successMessage && (
           <div className="mt-4 text-green-600 text-center">
             {successMessage}
+
           </div>
         )}
       </div>

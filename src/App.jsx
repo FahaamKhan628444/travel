@@ -6,6 +6,7 @@ import Home from '../src/pages/Home';
 import Register from './pages/Register';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
+import Booking from './components/Booking';
 import axios from 'axios';
 import { Toaster } from 'react-hot-toast';
 import { useState, useEffect } from 'react';
@@ -38,6 +39,7 @@ function App() {
               <Route path='/' element={<Home />} />
               <Route path='/register' element={<Register />} />
               <Route path='/login' element={<Login />} />
+              <Route path="/booking" element={<Booking />} />
               <Route path='/dashboard' element={<Dashboard />} />
             </Routes>
           </UserContextProvider>
